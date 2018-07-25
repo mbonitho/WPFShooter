@@ -42,6 +42,10 @@
         End Get
     End Property
 
+    Private Sub moveTo(x As Double, y As Double)
+        Margin = New Thickness With {.Left = x, .Top = y, .Right = Margin.Right, .Bottom = Margin.Bottom}
+    End Sub
+
     Public Sub MoveRelativeTo(x As Double, y As Double)
         _frameworkElement.Margin = New Thickness With {.Left = _frameworkElement.Margin.Left + x, .Top = _frameworkElement.Margin.Top + y, .Right = _frameworkElement.Margin.Right, .Bottom = _frameworkElement.Margin.Bottom}
     End Sub
